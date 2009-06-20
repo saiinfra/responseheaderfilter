@@ -3,48 +3,48 @@ A detailed sample for the ResponseHeaderFilter config file.
 <?xml version="1.0" encoding="UTF-8" ?>
 <response-header-mapper>
   <!-- response header rules for all suggest related headers -->
-  <mapping url="/ajax/suggest">
+  <mapping url="/ajax/get.html">
     <default>
       <response-headers>
-	<header key="Content-Type" value="application/x-javascript"/>
-        <header key="Cache-Control" value="private, max-age=3600"/>
+	<header key="Content-Type" value="text/xml"/>
+        <header key="Cache-Control" value="no-cache"/>
       </response-headers>
     </default>
 
-    <conditional queryParamName="type" queryParamValue="neighbourhoodSuggest">
-      <response-headers>
-        <header key="Content-Type" value="application/x-javascript"/>
-        <header key="Cache-Control" value="private, max-age=86400"/>
-      </response-headers>
-    </conditional>
-  </mapping>
-
-  <!-- response header rules the js resource bundle servlet -->
-  <mapping url="/js/resource-bundle.html">
-    <default>
-      <response-headers>
-	<header key="Content-Type" value="application/x-javascript"/>
-        <header key="Cache-Control" value="private, max-age=86400"/>
-      </response-headers>
-    </default>
-  </mapping>
-
-  <!-- response header rules for the geo-drop down actions -->
-  <mapping url="/ajax/geo-list.html">
-    <default>
+    <!-- cache all /ajax/get.html?type=country or /ajax/get.html?type=city requests for a day -->
+    <conditional queryParamName="type" queryParamValue="(country|city)">
       <response-headers>
 	<header key="Content-Type" value="text/xml"/>
         <header key="Cache-Control" value="private, max-age=86400"/>
       </response-headers>
+    </conditional>
+
+    <!-- cache all /ajax/get.html?type=neighborhood requests for 1 hour -->
+    <conditional queryParamName="type" queryParamValue="neighborhood">
+      <response-headers>
+	<header key="Content-Type" value="text/xml"/>
+        <header key="Cache-Control" value="private, max-age=3600"/>
+      </response-headers>
+    </conditional>
+  </mapping>
+
+  <!-- cache all (.*).js requests for 30 days -->
+  <mapping url="(.*).js">
+    <default>
+      <response-headers>
+	<header key="X-Server" value="MyServer"/>
+	<header key="Content-Type" value="application/x-javascript"/>
+        <header key="Cache-Control" value="public, max-age=2592000"/>
+      </response-headers>
     </default>
   </mapping>
 
-  <!-- response header rules for all the json requests (sendToPhone, clickToCall etc) -->
-  <mapping url="/json/(.*).html">
+  <!-- keep the connection alive for all json requests -->
+  <mapping url="/json/(.*)">
     <default>
       <response-headers>
-	<header key="Content-Type" value="application/javascript"/>
-        <header key="Cache-Control" value="no-cache"/>
+	<header key="Content-Type" value="application/json"/>
+        <header key="Connection" value="Keep-Alive"/>
       </response-headers>
     </default>
   </mapping>
