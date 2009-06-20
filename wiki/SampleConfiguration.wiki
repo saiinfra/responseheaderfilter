@@ -11,7 +11,7 @@ A detailed sample for the ResponseHeaderFilter config file.
       </response-headers>
     </default>
 
-    <!-- cache all /ajax/get.html?type=country or /ajax/get.html?type=city requests for a day -->
+    <!-- cache all */ajax/get.html?type=country* or */ajax/get.html?type=city* requests for a day -->
     <conditional queryParamName="type" queryParamValue="(country|city)">
       <response-headers>
 	<header key="Content-Type" value="text/xml"/>
@@ -19,7 +19,7 @@ A detailed sample for the ResponseHeaderFilter config file.
       </response-headers>
     </conditional>
 
-    <!-- cache all /ajax/get.html?type=neighborhood requests for 1 hour -->
+    <!-- cache all */ajax/get.html?type=neighborhood* requests for 1 hour -->
     <conditional queryParamName="type" queryParamValue="neighborhood">
       <response-headers>
 	<header key="Content-Type" value="text/xml"/>
