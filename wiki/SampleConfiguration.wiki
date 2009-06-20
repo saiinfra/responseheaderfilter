@@ -39,7 +39,7 @@ A detailed sample for the ResponseHeaderFilter config file.
     </default>
   </mapping>
 
-  <!-- keep the connection alive for all json requests -->
+  <!-- keep the http connection alive for all json requests -->
   <mapping url="/json/(.*)">
     <default>
       <response-headers>
