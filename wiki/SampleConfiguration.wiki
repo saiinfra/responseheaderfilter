@@ -1,0 +1,53 @@
+= Introduction =
+A detailed sample for the ResponseHeaderFilter config file.
+{{{
+<?xml version="1.0" encoding="UTF-8" ?>
+<response-header-mapper>
+  <!-- response header rules for all suggest related headers -->
+  <mapping url="/ajax/suggest">
+    <default>
+      <response-headers>
+	<header key="Content-Type" value="application/x-javascript"/>
+        <header key="Cache-Control" value="private, max-age=3600"/>
+      </response-headers>
+    </default>
+
+    <conditional queryParamName="type" queryParamValue="neighbourhoodSuggest">
+      <response-headers>
+        <header key="Content-Type" value="application/x-javascript"/>
+        <header key="Cache-Control" value="private, max-age=86400"/>
+      </response-headers>
+    </conditional>
+  </mapping>
+
+  <!-- response header rules the js resource bundle servlet -->
+  <mapping url="/js/resource-bundle.html">
+    <default>
+      <response-headers>
+	<header key="Content-Type" value="application/x-javascript"/>
+        <header key="Cache-Control" value="private, max-age=86400"/>
+      </response-headers>
+    </default>
+  </mapping>
+
+  <!-- response header rules for the geo-drop down actions -->
+  <mapping url="/ajax/geo-list.html">
+    <default>
+      <response-headers>
+	<header key="Content-Type" value="text/xml"/>
+        <header key="Cache-Control" value="private, max-age=86400"/>
+      </response-headers>
+    </default>
+  </mapping>
+
+  <!-- response header rules for all the json requests (sendToPhone, clickToCall etc) -->
+  <mapping url="/json/(.*).html">
+    <default>
+      <response-headers>
+	<header key="Content-Type" value="application/javascript"/>
+        <header key="Cache-Control" value="no-cache"/>
+      </response-headers>
+    </default>
+  </mapping>
+</response-header-mapper>
+}}}
