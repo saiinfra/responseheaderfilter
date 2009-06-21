@@ -14,6 +14,33 @@
 The file {{{response-header-filter.xml}}} contains instructions for the filter to process requests. It basically contains a set of [#mapping mappings] which are internally processed as [http://code.google.com/p/responseheaderfilter/source/browse/trunk/src/java/com/avlesh/web/filter/responseheaderfilter/Rule.java Rules]. If an incoming request is found to be a match with one of the mappings, the corresponding Rules are applied to the response.
 </p>
 <p>For a sample mapping file, [SampleConfiguration click here]
+<code>configFile</code> processor: Processes the file according to these rules:
+<ol>
+<li>The file <b>should</b> have <code>response-header-mapper</code> as the root node.</li>
+<li>Each node (in the xml) with the name <code>mapping</code> is identified as mapping rule and
+gets converted into a {@link Rule}.<br/><code>url</code> is a mandatory attribute in the <code>mapping</code> node;
+mappings without a <code>url</code> are rejected.
+</li>
+<li>Subsequent mappings for the same <code>url</code> will <b>OVERRIDE</b> the previous {@link Rule}.
+<i>Last <code>Rule</code> wins</i>.
+</li>
+<li>Each mapping can have only <b>one <code>default</code></b> <code>response-header</code> list.
+In cases of multiple such declarations, the <i>Last &lt;default&gt; declaration wins</i>.
+</li>
+<li>Each mapping can have any number of <code>conditional</code> mappings.
+All these rules are treated as mutually exclusive.
+</li>
+<li>Both, <code>default</code> and <code>conditional</code> nodes <b>should</b> have a &lt;response-headers&gt;
+node. In case of multiple such nodes, <i>Last &lt;response-headers&gt; declaration wins</i>.
+</li>
+<li>Each &lt;response-headers&gt; node may contain one or more &lt;header&gt; nodes. Each such node has to have two mandatory
+attributes, <code>key</code> and <code>value</code>.</li>
+<li>Both, <code>queryParamName</code> and <code>queryParamValue</code>, are required attributes in a <code>conditional</code> tag.
+They <b>can't</b> be left blank or undeclared.
+</li>
+<li>Values inside the <code>queryParamValue</code> attribute are parsed as a <code>Pattern</code>.</li>
+</ol>
+</p>
 <table cellspacing="0" cellpadding="2" border="1" width="700">
  <thead>
   <tr>
