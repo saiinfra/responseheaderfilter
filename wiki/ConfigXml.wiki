@@ -8,7 +8,8 @@
  <tr>
   <td valign="top" width="200">response-header-mapper</td>
   <td valign="top" colspan="2" width="500">
-   <table cellspacing="0" cellpadding="0" border="0" width="500">
+   <div>
+   <table cellspacing="0" cellpadding="0" border="1" width="500">
     <tr>
      <td valign="top" width="200">processorClass</td>
      <td valign="top" width="300">
@@ -18,6 +19,7 @@
      </td>
     </tr>
    </table>
+   </div>
   </td>
  </tr>
  <tr>
