@@ -8,9 +8,9 @@
  <tr>
   <td valign="top">response-header-mapper</td>
   <td valign="top" colspan="2">
-   <table cellspacing="0" cellpadding="2" border="1" width="700">
+   <table cellspacing="0" cellpadding="2" border="1" width="100%">
     <tr>
-     <td valign="top">processorClass</td>
+     <td valign="top" width="30%">processorClass</td>
      <td>
   # Description: Class to handle application of response headers
   # Required: No
