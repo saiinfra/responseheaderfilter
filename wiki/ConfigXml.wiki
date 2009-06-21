@@ -1,7 +1,7 @@
 #summary Understand elements and attributes in the configuration
- * Introduction
- * Response-header-mapper
-  * processorClass 
+ *Introduction
+ *Response-header-mapper
+  *processorClass 
 
 <table cellspacing="0" cellpadding="2" border="1" width="700">
  <thead>
