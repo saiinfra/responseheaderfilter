@@ -23,21 +23,20 @@ gets converted into a Rule.<br/>url is a mandatory attribute in the mapping node
 <li>Subsequent mappings for the same url will <b>OVERRIDE</b> the previous Rule.
 <i>Last Rule wins</i>.
 </li>
-<li>Each mapping can have only <b>one <code>default</code></b> <code>response-header</code> list.
+<li>Each mapping can have only <b>one {{{default}}}</b> response-header list.
 In cases of multiple such declarations, the <i>Last &lt;default&gt; declaration wins</i>.
 </li>
-<li>Each mapping can have any number of <code>conditional</code> mappings.
+<li>Each mapping can have any number of {{{conditional}}} mappings.
 All these rules are treated as mutually exclusive.
 </li>
-<li>Both, <code>default</code> and <code>conditional</code> nodes <b>should</b> have a &lt;response-headers&gt;
+<li>Both, default and conditional nodes <b>should</b> have a &lt;response-headers&gt;
 node. In case of multiple such nodes, <i>Last &lt;response-headers&gt; declaration wins</i>.
 </li>
 <li>Each &lt;response-headers&gt; node may contain one or more &lt;header&gt; nodes. Each such node has to have two mandatory
-attributes, <code>key</code> and <code>value</code>.</li>
-<li>Both, <code>queryParamName</code> and <code>queryParamValue</code>, are required attributes in a <code>conditional</code> tag.
-They <b>can't</b> be left blank or undeclared.
+attributes, {{{key}}} and {{{value}}}.</li>
+<li>Both, {{{queryParamName}}} and {{{queryParamValue}}}, are required attributes in a conditional tag. They <b>can't</b> be left blank or undeclared.
 </li>
-<li>Values inside the <code>queryParamValue</code> attribute are parsed as a <code>Pattern</code>.</li>
+<li>Values inside the {{{queryParamValue}}} attribute are parsed as a {{{{Pattern}}}.</li>
 </ol>
 </p>
 <table cellspacing="0" cellpadding="2" border="1" width="700">
