@@ -14,12 +14,11 @@
 The file {{{response-header-filter.xml}}} contains instructions for the filter to process requests. It basically contains a set of [#mapping mappings] which are internally processed as [http://code.google.com/p/responseheaderfilter/source/browse/trunk/src/java/com/avlesh/web/filter/responseheaderfilter/Rule.java Rules]. If an incoming request is found to be a match with one of the mappings, the corresponding Rules are applied to the response.
 </p>
 <p>For a sample mapping file, [SampleConfiguration click here]
-<code>configFile</code> processor: Processes the file according to these rules:
+The file content is processed according to these rules:
 <ol>
-<li>The file <b>should</b> have <code>response-header-mapper</code> as the root node.</li>
-<li>Each node (in the xml) with the name <code>mapping</code> is identified as mapping rule and
-gets converted into a {@link Rule}.<br/><code>url</code> is a mandatory attribute in the <code>mapping</code> node;
-mappings without a <code>url</code> are rejected.
+<li>The file <b>should</b> have response-header-mapper as the root node.</li>
+<li>Each node (in the xml) with the name mapping is identified as mapping rule and
+gets converted into a Rule.<br/>url is a mandatory attribute in the <code>mapping</code> node; mappings without a url are rejected.
 </li>
 <li>Subsequent mappings for the same <code>url</code> will <b>OVERRIDE</b> the previous {@link Rule}.
 <i>Last <code>Rule</code> wins</i>.
