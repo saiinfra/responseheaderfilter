@@ -7,7 +7,7 @@
  </tr>
  <tr>
   <td valign="top" width="200">response-header-mapper</td>
-  <td valign="top" colspan="2" width="500">
+  <td valign="top" align="top" colspan="2" width="500">
     wewrqwer
   </td>
  </tr>
