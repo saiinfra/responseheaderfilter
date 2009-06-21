@@ -9,7 +9,7 @@
   <td valign="top" width="200">response-header-mapper</td>
   <td valign="top" colspan="2" width="500">
    <table cellspacing="0" cellpadding="2" border="1" width="100%">
-    <tr>
+    <tr bgcolor="red">
      <td valign="top" width="30%">processorClass</td>
      <td valign="top" width="70%">
   # Description: Class to handle application of response headers
@@ -17,7 +17,7 @@
   # Default: [http://code.google.com/p/responseheaderfilter/source/browse/trunk/src/java/com/avlesh/web/filter/responseheaderfilter/DefaultMappingProcessor.java DefaultMappingProcessor]
      </td>
     </tr>
-   </table> 
+   </table>
   </td>
  </tr>
  <tr>
