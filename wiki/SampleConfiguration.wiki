@@ -1,3 +1,4 @@
+#summary A simple configuration for the ResponseHeaderFilter
 = Introduction =
 A detailed sample for the ResponseHeaderFilter config file.
 {{{
