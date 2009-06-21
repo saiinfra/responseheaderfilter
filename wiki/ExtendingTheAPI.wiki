@@ -1,4 +1,4 @@
-#summary Writing your custom implementation of applying the response headers
+#summary Writing your custom implementation for applying the response headers
 With !ResponseHeaderFilter, writing your own custom implementation for applying the rules is very easy. Many a times, you may need to apply response headers based on the request or response. The !ResponseHeaderFilter takes charge of performing the match for a particular mapping (and this functionality lies only with the !ResponseHeaderFilter). Once a particular {{{<mapping>}}} is found to be a match, your processor class will be invoked to implement the rules in the response headers.
 {{{
 <?xml version="1.0" encoding="UTF-8" ?>
