@@ -8,7 +8,7 @@
   </tr>
  </thead>
  <tbody>
-  <tr colspan="2">
+  <tr colspan="3">
    <td valign="top" width="200">response-header-mapper</td>
    <td valign="top" align="top" width="500">
      wewrqwer
