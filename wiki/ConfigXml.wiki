@@ -1,0 +1,7 @@
+#summary Understand elements and attributes in the configuration
+
+= Introduction =
+Underneath is a details on the configuration elements and their attributes
+
+|| *Node name* || *Description* ||
+|| response-header-mapper || Root node for the configuration ||
