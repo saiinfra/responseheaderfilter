@@ -30,10 +30,9 @@ In cases of multiple such declarations, the <i>Last `<default>` declaration wins
 All these rules are treated as mutually exclusive.
 </li>
 <li>Both, default and conditional nodes <b>should</b> have a &lt;response-headers&gt;
-node. In case of multiple such nodes, <i>Last &lt;response-headers&gt; declaration wins</i>.
+node. In case of multiple such nodes, <i>Last `<response-headers>` declaration wins</i>.
 </li>
-<li>Each &lt;response-headers&gt; node may contain one or more &lt;header&gt; nodes. Each such node has to have two mandatory
-attributes, {{{key}}} and {{{value}}}.</li>
+<li>Each `<response-headers>` node may contain one or more `<header>` nodes. Each such node has to have two mandatory attributes, {{{key}}} and {{{value}}}.</li>
 <li>Both, {{{queryParamName}}} and {{{queryParamValue}}}, are required attributes in a conditional tag. They <b>can't</b> be left blank or undeclared.
 </li>
 <li>Values inside the {{{queryParamValue}}} attribute are parsed as a {{{{Pattern}}}.</li>
