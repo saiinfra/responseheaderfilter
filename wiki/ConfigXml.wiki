@@ -18,10 +18,10 @@ The file content is processed according to these rules:
 <ol>
 <li>The file <b>should</b> have response-header-mapper as the root node.</li>
 <li>Each node (in the xml) with the name mapping is identified as mapping rule and
-gets converted into a Rule.<br/>url is a mandatory attribute in the <code>mapping</code> node; mappings without a url are rejected.
+gets converted into a Rule.<br/>url is a mandatory attribute in the mapping node; mappings without a url are rejected.
 </li>
-<li>Subsequent mappings for the same <code>url</code> will <b>OVERRIDE</b> the previous {@link Rule}.
-<i>Last <code>Rule</code> wins</i>.
+<li>Subsequent mappings for the same url will <b>OVERRIDE</b> the previous Rule.
+<i>Last Rule wins</i>.
 </li>
 <li>Each mapping can have only <b>one <code>default</code></b> <code>response-header</code> list.
 In cases of multiple such declarations, the <i>Last &lt;default&gt; declaration wins</i>.
