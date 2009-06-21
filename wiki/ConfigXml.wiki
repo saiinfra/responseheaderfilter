@@ -1,6 +1,4 @@
 #summary Understand elements and attributes in the configuration
-
-= Elements of the !ResponseHeaderFilter config file =
 <table cellspacing="1" cellpadding="1" border="1" width="700">
  <tr>
   <td width="200">*Node name*</td>
