@@ -11,7 +11,11 @@ Underneath is a details on the configuration elements and their attributes
  </tr>
  <tr>
   <td>response-header-mapper</td>
-  <td>Root node in the mapping</td>
-  <td>Root node in the mapping</td>
+  <td>{{{processorClass}}}</td>
+  <td>
+  # Description: Class to handle application of response headers
+  # Required: No
+  # Default: com.avlesh.web.filter.responseheaderfilter.DefaultMappingProcessor
+  </td>
  </tr>
 </table>
