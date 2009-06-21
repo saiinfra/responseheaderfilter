@@ -16,3 +16,29 @@ the class specified above would be applicable for all the {{{<mapping>}}}'s in y
   ...
 </response-header-mapper>
 }}}
+
+And, yes writing a processor class is very simple. All you need to do is to implement the {{{com.avlesh.web.filter.responseheaderfilter.MappingProcessor}}} interface. This is how a typical {{{MappingProcessor}}} implementation would look like:
+{{{
+package com.foo;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.List;
+
+public class SimpleMappingProcessor implements MappingProcessor {
+  public void preProcess(HttpServletRequest request, HttpServletResponse response, Rule applicableRule) {
+  }
+
+  public void applyHeaders(HttpServletRequest request,
+                           HttpServletResponse response, 
+                           List<Rule.ResponseHeader> responseHeaders,
+                           Rule applicableRule) {
+    for(Rule.ResponseHeader responseHeader : responseHeaders){
+      response.setHeader(responseHeader.getResponseHeaderKey(), responseHeader.getResponseHeaderValue());
+    }
+  }
+
+  public void postProcess(HttpServletRequest request, HttpServletResponse response, Rule applicableRule) {
+  }
+}
+}}}
