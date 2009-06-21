@@ -42,4 +42,4 @@ public class SimpleMappingProcessor implements MappingProcessor {
   }
 }
 }}}
-The interesting pieces are the {{{preProcess}}} and {{{postProcess}}} methods. These are called just before and after the {{{applyHeaders}}} is called by the Filter, when a match happens. In all the above methods, other than the {{{request}}} and {{{response}}}, you'll also have access to the [http://code.google.com/p/responseheaderfilter/source/browse/trunk/src/java/com/avlesh/web/filter/responseheaderfilter/Rule.java]Rule for this particular url as specified in the config. 
+The interesting pieces are the {{{preProcess}}} and {{{postProcess}}} methods. These are called just before and after the {{{applyHeaders}}} is called by the Filter, when a match happens. In all the above methods, other than the {{{request}}} and {{{response}}}, you'll also have access to the [http://code.google.com/p/responseheaderfilter/source/browse/trunk/src/java/com/avlesh/web/filter/responseheaderfilter/Rule.java]Rule[/] for this particular url as specified in the config. 
