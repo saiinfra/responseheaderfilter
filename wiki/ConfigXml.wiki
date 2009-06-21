@@ -10,7 +10,8 @@
  * [#response-headers response-headers]
 
 = Introduction =
-Balle balle
+The file {{{response-header-filter.xml}}} contains instructions for the filter to process requests. It basically contains a set of [#mapping mappings] which are internally processed as [http://code.google.com/p/responseheaderfilter/source/browse/trunk/src/java/com/avlesh/web/filter/responseheaderfilter/Rule.java Rules]
+
 <table cellspacing="0" cellpadding="2" border="1" width="700">
  <thead>
   <tr>
