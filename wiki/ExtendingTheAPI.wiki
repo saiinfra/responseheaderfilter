@@ -1,31 +1,18 @@
 #summary Writing your custom implementation for applying the response headers
-With !ResponseHeaderFilter, writing your own custom implementation for applying the rules is very easy. Many a times, you may need to apply response headers based on the request or response. The !ResponseHeaderFilter takes charge of performing the match for a particular mapping (and this functionality lies only with the !ResponseHeaderFilter). Once a particular {{{<mapping>}}} is found to be a match, your processor class will be invoked to implement the rules in the response headers.
+With !ResponseHeaderFilter, writing your own custom implementation for applying the rules is very easy. Many a times, you may need to apply response headers based on the request or response. The !ResponseHeaderFilter takes charge of performing the match for a particular mapping (and this functionality cannot be extended). Once a particular {{{<mapping>}}} is found to be a match, your processor class will be invoked to implement the rules in the response headers.
+
+You may define a processor at the *root level* in your config, e.g
 {{{
-<?xml version="1.0" encoding="UTF-8" ?>
 <response-header-mapper processorClass="com.foo.YourClass">
-  <!-- response header rules for all suggest related headers -->
-  <mapping url="/ajax/get.html">
-    <default>
-      <response-headers>
-	<header key="Content-Type" value="text/xml"/>
-        <header key="Cache-Control" value="no-cache"/>
-      </response-headers>
-    </default>
-
-    <!-- cache all "/ajax/get.html?type=country" or "/ajax/get.html?type=city" requests for a day -->
-    <conditional queryParamName="type" queryParamValue="(country|city)">
-      <response-headers>
-	<header key="Content-Type" value="text/xml"/>
-        <header key="Cache-Control" value="private, max-age=86400"/>
-      </response-headers>
-    </conditional>
-
-    <!-- cache all "/ajax/get.html?type=neighborhood" requests for 1 hour -->
-    <conditional queryParamName="type" queryParamValue="neighborhood">
-      <response-headers>
-	<header key="Content-Type" value="text/xml"/>
-        <header key="Cache-Control" value="private, max-age=3600"/>
-      </response-headers>
-    </conditional>
+  ...
+</response-header-mapper>
+}}}
+the class specified above would be applicable for all the {{{<mapping>}}}'s in your file. If you need an overriding behavior for a particular mapping, you can define a {{{processorClass}}} attribute for your {{{<mapping>}}}, e.g
+{{{
+<response-header-mapper processorClass="com.foo.YourClass">
+  <mapping url="(.*).js" processorClass="com.foo.YourClassForThisMapping">
+    ...
   </mapping>
+  ...
+</response-header-mapper>
 }}}
