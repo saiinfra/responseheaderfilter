@@ -1,23 +1,27 @@
 #summary Understand elements and attributes in the configuration
 <table cellspacing="0" cellpadding="2" border="1" width="700">
- <tr>
-  <td width="200">*Node name*</td>
-  <td width="200">*Attributes*</td>
-  <td width="300">*Description*</td>
- </tr>
- <tr>
-  <td valign="top" width="200">response-header-mapper</td>
-  <td valign="top" align="top" colspan="2" width="500">
-    wewrqwer
-  </td>
- </tr>
- <tr>
-  <td valign="top">mapping</td>
-  <td valign="top">url</td>
-  <td valign="top">  
+ <thead>
+  <tr>
+   <td width="200">*Node name*</td>
+   <td width="200">*Attributes*</td>
+   <td width="300">*Description*</td>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td valign="top" width="200">response-header-mapper</td>
+   <td valign="top" align="top" width="500">
+     wewrqwer
+   </td>
+  </tr>
+  <tr>
+   <td valign="top">mapping</td>
+   <td valign="top">url</td>
+   <td valign="top">  
   # Description: Url pattern for which this mapping should be applied to.
   # Required: Yes
   # Remarks: Similar (read {{{equal}}}) url patterns in the mapping override the previous declaration.
-  </td>
- </tr>
+   </td>
+  </tr>
+ </tbody>
 </table>
