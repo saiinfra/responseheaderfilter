@@ -29,7 +29,7 @@ In cases of multiple such declarations, the <i>Last `<default>` declaration wins
 <li>Each mapping can have any number of {{{conditional}}} mappings.
 All these rules are treated as mutually exclusive.
 </li>
-<li>Both, default and conditional nodes <b>should</b> have a &lt;response-headers&gt;
+<li>Both, default and conditional nodes <b>should</b> have a `<response-headers>`
 node. In case of multiple such nodes, <i>Last `<response-headers>` declaration wins</i>.
 </li>
 <li>Each `<response-headers>` node may contain one or more `<header>` nodes. Each such node has to have two mandatory attributes, {{{key}}} and {{{value}}}.</li>
