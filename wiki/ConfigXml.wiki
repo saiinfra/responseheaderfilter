@@ -10,16 +10,14 @@
  <tbody>
   <tr>
    <td valign="top" width="200">response-header-mapper</td>
-   <td valign="top" width="500" colspan="2"><table align="left" cellspacing="0" cellpadding="0" border="1" width="500">
-     <tr>
-      <td valign="top" width="200">processorClass</td>
-      <td valign="top" width="300">
+   <td valign="top" width="500" colspan="2"><table align="left" cellspacing="0" cellpadding="0" border="1" width="500"><tr><td valign="top" width="200">processorClass</td><td valign="top" width="300">
   # Description: Class to handle application of response headers
   # Required: No
   # Default: [http://code.google.com/p/responseheaderfilter/source/browse/trunk/src/java/com/avlesh/web/filter/responseheaderfilter/DefaultMappingProcessor.java DefaultMappingProcessor]
       </td>
      </tr>
-    </table></td>
+    </table>
+   </td>
   </tr>
   <tr>
    <td valign="top">mapping</td>
