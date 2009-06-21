@@ -7,12 +7,17 @@
  </tr>
  <tr>
   <td valign="top">response-header-mapper</td>
-  <td valign="top">processorClass</td>
-  <td valign="top">
-  What the hell
+  <td valign="top" colspan="2">
+   <table cellspacing="0" cellpadding="2" border="1" width="700">
+    <tr>
+     <td valign="top">processorClass</td>
+     <td>
   # Description: Class to handle application of response headers
   # Required: No
   # Default: [http://code.google.com/p/responseheaderfilter/source/browse/trunk/src/java/com/avlesh/web/filter/responseheaderfilter/DefaultMappingProcessor.java DefaultMappingProcessor]
+     </td>
+    </tr>
+   </table> 
   </td>
  </tr>
  <tr>
