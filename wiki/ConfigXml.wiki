@@ -24,7 +24,7 @@ gets converted into a Rule.<br/>url is a mandatory attribute in the mapping node
 <i>Last Rule wins</i>.
 </li>
 <li>Each mapping can have only <b>one {{{default}}}</b> response-header list.
-In cases of multiple such declarations, the <i>Last <default> declaration wins</i>.
+In cases of multiple such declarations, the <i>Last `<default>` declaration wins</i>.
 </li>
 <li>Each mapping can have any number of {{{conditional}}} mappings.
 All these rules are treated as mutually exclusive.
