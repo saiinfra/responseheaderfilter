@@ -19,8 +19,7 @@
   # Default: [http://code.google.com/p/responseheaderfilter/source/browse/trunk/src/java/com/avlesh/web/filter/responseheaderfilter/DefaultMappingProcessor.java DefaultMappingProcessor]
       </td>
      </tr>
-    </table>
-   </td>
+    </table></td>
   </tr>
   <tr>
    <td valign="top">mapping</td>
