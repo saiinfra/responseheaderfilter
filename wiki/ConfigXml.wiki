@@ -1,5 +1,5 @@
 #summary Understand elements and attributes in the configuration
-<table cellspacing="1" cellpadding="1" border="1" width="700">
+<table cellspacing="0" cellpadding="2" border="1" width="700">
  <tr>
   <td width="200">*Node name*</td>
   <td width="200">*Attributes*</td>
