@@ -22,6 +22,7 @@ Underneath is a details on the configuration elements and their attributes
   <td valign="top">url</td>
   <td valign="top">1. Description: Url pattern for which this mapping should be applied to.
 <br/>2. Required: Yes
-<br/>3. Remarks: Similar (read equal) url patterns in the mapping override the previous declaration.
+<br/>3. Remarks: Similar (read {{{equal}}}) url patterns in the mapping override the previous declaration.
+  </td>
  </tr>
 </table>
