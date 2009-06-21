@@ -10,12 +10,12 @@ Underneath is a details on the configuration elements and their attributes
   <td width="300">*Description*</td>
  </tr>
  <tr>
-  <td>response-header-mapper</td>
-  <td>{{{processorClass}}}</td>
-  <td>
+  <td valign="top">response-header-mapper</td>
+  <td valign="top">{{{processorClass}}}</td>
+  <td valign="top">
   # Description: Class to handle application of response headers
   # Required: No
-  # Default: com.avlesh.web.filter.responseheaderfilter.DefaultMappingProcessor
+  # Default: [http://code.google.com/p/responseheaderfilter/source/browse/trunk/src/java/com/avlesh/web/filter/responseheaderfilter/DefaultMappingProcessor.java DefaultMappingProcessor]
   </td>
  </tr>
 </table>
