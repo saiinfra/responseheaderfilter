@@ -1,6 +1,4 @@
-#summary A simple configuration for the ResponseHeaderFilter
-= Introduction =
-A detailed sample for the ResponseHeaderFilter config file.
+#summary A detailed sample for the ResponseHeaderFilter config .
 {{{
 <?xml version="1.0" encoding="UTF-8" ?>
 <response-header-mapper>
