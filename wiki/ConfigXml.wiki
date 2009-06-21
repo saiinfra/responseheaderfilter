@@ -1,7 +1,13 @@
 #summary Understand elements and attributes in the configuration
- * Introduction
- * [#response-header-mapper Response-header-mapper]
-  * processorClass 
+ * [#Introduction Introduction]
+ * [#response-header-mapper response-header-mapper]
+  * [#processorClass processorClass] 
+ * [#mapping mapping]
+  * [#url url]
+  * [#processorClass processorClass]
+ * [#default default]
+ * [#conditional conditional]
+ * [#response-headers response-headers]
 
 <table cellspacing="0" cellpadding="2" border="1" width="700">
  <thead>
