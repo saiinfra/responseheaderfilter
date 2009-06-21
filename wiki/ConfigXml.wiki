@@ -3,10 +3,10 @@
 = Introduction =
 Underneath is a details on the configuration elements and their attributes
 
-<table cellspacing="0" cellpadding="0" border="1" width="100%">
+<table cellspacing="0" cellpadding="0" border="0">
  <tr>
-  <td>Node name</td>
-  <td>Description</td>
+  <td>*Node name*</td>
+  <td>*Description*</td>
  </tr>
  <tr>
   <td>response-header-mapper</td>
