@@ -8,17 +8,19 @@
  <tr>
   <td valign="top">response-header-mapper</td>
   <td valign="top">processorClass</td>
-  <td valign="top">1. Description: Class to handle application of response headers
-<br/>2. Required: No
-<br/>3. Default: [http://code.google.com/p/responseheaderfilter/source/browse/trunk/src/java/com/avlesh/web/filter/responseheaderfilter/DefaultMappingProcessor.java DefaultMappingProcessor]
+  <td valign="top">
+1. Description: Class to handle application of response headers
+2. Required: No
+3. Default: [http://code.google.com/p/responseheaderfilter/source/browse/trunk/src/java/com/avlesh/web/filter/responseheaderfilter/DefaultMappingProcessor.java DefaultMappingProcessor]
   </td>
  </tr>
  <tr>
   <td valign="top">mapping</td>
   <td valign="top">url</td>
-  <td valign="top">1. Description: Url pattern for which this mapping should be applied to.
-<br/>2. Required: Yes
-<br/>3. Remarks: Similar (read {{{equal}}}) url patterns in the mapping override the previous declaration.
+  <td valign="top">
+1. Description: Url pattern for which this mapping should be applied to.
+2. Required: Yes
+3. Remarks: Similar (read {{{equal}}}) url patterns in the mapping override the previous declaration.
   </td>
  </tr>
 </table>
