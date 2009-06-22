@@ -41,9 +41,7 @@ node. In case of multiple such nodes, <i>Last `<response-headers>` declaration w
 
 = response-header-mapper =
 This is the root node for the filter configuration file and is expected. 
-<blockquote>
-wah wah
-</blockquote>
+ <p>wah wah</p>
 <table cellspacing="0" cellpadding="2" border="1" width="700">
  <thead>
   <tr>
