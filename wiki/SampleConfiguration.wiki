@@ -2,10 +2,12 @@
 = /WEB-INF/response-header-filter.xml =
 {{{
 <!--
-Configuration file for the ResponseHeaderFilter. Add a list of mappings that you want to introduce in your webapp for different url's
+Configuration file for the ResponseHeaderFilter. 
+Add a list of mappings that you want to introduce in your webapp for different url's.
 
 For details on the contents of this file, go here - http://code.google.com/p/responseheaderfilter/wiki/ConfigXml
 -->
+
 <?xml version="1.0" encoding="UTF-8" ?>
 <response-header-mapper>
   <!-- Default headers for all AJAX requests. Don't cache any such request -->
