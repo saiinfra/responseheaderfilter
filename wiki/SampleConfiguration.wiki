@@ -10,7 +10,7 @@ For details on the contents of this file, go here - http://code.google.com/p/res
 
 <?xml version="1.0" encoding="UTF-8" ?>
 <response-header-mapper>
-  <!-- Default headers for all AJAX requests. Don't cache any such request -->
+  <!-- directives to set "no-cache" headers for all AJAX requests -->
   <mapping url="/ajax/*.html">
     <default>
       <response-headers>
@@ -20,15 +20,17 @@ For details on the contents of this file, go here - http://code.google.com/p/res
     </default>
 
     <!-- 
-     If one of your AJAX handlers was fetching a list of cities or countries 
-     (which thankfully don't change very often), you would want the browser to cache
-     these the response and that too for a significantly longer time.
+     If one of your AJAX request handlers was fetching, lets say, 
+     a list of cities or countries (which thankfully don't change very often), 
+     you would want the browser to cache these responses and that 
+     too for a significantly longer time.
      
      The ResponseHeaderFilter gives you the power of <conditional> mappings,
      wherein you can have mappings based on a query parameter in the request 
      and its expected value (which can be a Pattern)
 
-     Instruction to cache all "/ajax/*.html?fetch=country" or "/ajax/*.html?fetch=city" 
+     Underneath is an example of how to specify directives to cache responses for 
+     all "/ajax/*.html?fetch=country" or "/ajax/*.html?fetch=city" 
      requests for a day
     -->
 
@@ -40,7 +42,7 @@ For details on the contents of this file, go here - http://code.google.com/p/res
     </conditional>
   </mapping>
 
-  <!-- cache all "(.*).js" requests for 30 days -->
+  <!-- directives to cache all "(.*).js" requests for 30 days -->
   <mapping url="(.*).js">
     <default>
       <response-headers>
@@ -51,7 +53,7 @@ For details on the contents of this file, go here - http://code.google.com/p/res
     </default>
   </mapping>
 
-  <!-- keep the http connection alive for all json requests -->
+  <!-- directives to keep the http connection alive for all json requests -->
   <mapping url="/json/(.*)">
     <default>
       <response-headers>
