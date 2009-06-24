@@ -44,7 +44,8 @@ node. In case of multiple such nodes, <i>Last `<response-headers>` declaration w
  * Required: Yes
  * Attributes: 
   == processorClass == 
-  * Description: A fully qualified class name for the processor class, if you want to process the response headers on your own. You would need a processor class when setting the headers needs to be done after some sort of evaluation. Your class should implement the {{{com.avlesh.web.filter.responseheaderfilter.MappingProcessor}}} interface.
+  * Description: A fully qualified class name for the processor class, if you want to process the response headers on your own. You would need a processor class when setting the headers needs to be done after some sort of evaluation. 
+Your class should implement the {{{com.avlesh.web.filter.responseheaderfilter.MappingProcessor}}} interface.
   * Required: No
   * Default: {{{com.avlesh.web.filter.responseheaderfilter.DefaultMappingProcessor}}} 
 
