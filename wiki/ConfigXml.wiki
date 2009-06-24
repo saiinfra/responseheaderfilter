@@ -44,7 +44,9 @@ node. In case of multiple such nodes, <i>Last `<response-headers>` declaration w
  * Required: Yes
  * Attributes: 
   == processorClass == 
-  A fully classified class name if you want to process the response headers on your own. 
+  * Description: A fully classified class name if you want to process the response headers on your own. 
+  * Required: No
+  * Default: {{{com.avlesh.web.filter.responseheaderfilter.DefaultMappingProcessor}}} 
 <table cellspacing="0" cellpadding="2" border="1" width="700">
  <thead>
   <tr>
