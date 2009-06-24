@@ -40,8 +40,11 @@ node. In case of multiple such nodes, <i>Last `<response-headers>` declaration w
 </p>
 
 = response-header-mapper =
-This is the root node for the filter configuration file and is expected. 
- <p>wah wah</p>
+This is the root node for the filter configuration file and is a expected node.
+ <p>
+  == processorClass == 
+  A fully classified class name if you want to process the response headers on your own. 
+ </p>
 <table cellspacing="0" cellpadding="2" border="1" width="700">
  <thead>
   <tr>
