@@ -23,6 +23,7 @@
      Instruction to cache all "/ajax/*.html?fetch=country" or "/ajax/*.html?fetch=city" 
      requests for a day
     -->
+
     <conditional queryParamName="type" queryParamValue="(country|city)">
       <response-headers>
 	<header key="Content-Type" value="text/xml"/>
