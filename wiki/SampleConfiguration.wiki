@@ -57,7 +57,7 @@
 <br/>
 ----
 <br/>
-= Next =
+= Next steps =
   # Get minute details on the node elements and their attributes in the configuration [http://code.google.com/p/responseheaderfilter/wiki/ConfigXml here].
   # Interested in implementing a custom behaviour? Learn how to [http://code.google.com/p/responseheaderfilter/wiki/ExtendingTheAPI extend this API].
   # Learn how to [http://code.google.com/p/responseheaderfilter/#Getting_started get started] on this filter in your webapp.
