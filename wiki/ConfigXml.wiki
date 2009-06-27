@@ -61,6 +61,9 @@ node. In case of multiple such nodes, <i>Last `<response-headers>` declaration w
   * Required: No
   * Default: {{{com.avlesh.web.filter.responseheaderfilter.DefaultMappingProcessor}}} 
 
+= default =
+ * Description: This is a child node for the {{{mapping}}} node. If response headers are specified for this rule, 
+ * Required: No
 
 <table cellspacing="0" cellpadding="2" border="1" width="700">
  <thead>
