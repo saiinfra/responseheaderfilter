@@ -29,4 +29,4 @@ and then add the above class to your struts-config.xml to tell struts that you h
 {{{
 <controller processorClass="com.foo.MyRequestProcessor"/>
 }}}
-*Note: Add this only after all your {{{<action-mappings>}}} in the struts-config.xml*
+*Note: Add this only after all the {{{<action-mappings>}}} in your struts-config.xml*
