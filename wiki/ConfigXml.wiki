@@ -75,7 +75,9 @@ node. In case of multiple such nodes, <i>Last `<response-headers>` declaration w
   == queryParamValue == 
   * Description: In the above example, the value has to be specified in the {{{queryParamValue}}} attribute. This also takes a {{{Pattern}}}.
   * Required: Yes
+
  * NOTE: *Conditional rules are evaluated from bottom to top. _Last matching rule wins_.
+
 <table cellspacing="0" cellpadding="2" border="1" width="700">
  <thead>
   <tr>
