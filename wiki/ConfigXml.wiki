@@ -91,26 +91,10 @@ node. In case of multiple such nodes, <i>Last `<response-headers>` declaration w
   == queryParamValue == 
   * Description: In the above example, the value has to be specified in the {{{queryParamValue}}} attribute. This also takes a {{{Pattern}}}.
   * Required: Yes
-
- * NOTE: *Conditional rules are evaluated from bottom to top. _Last matching rule (in the config) wins_*.
-
-= response-headers =
-Any {{{default}}} or {{{conditional}}} node is considered invalid without a list response-headers that needs to be applied for a particular {{{mapping}}}. A response-headers node comprises of a list of {{{header}}} nodes.
-  == header == 
-  This the lowest unit in the configuration. Each header is a specific response header that needs to be applied to the {{{response}}}. A header comprises of
-   == key ==
-   To be specific, a response-header key
-   == value ==
-   The value for the above mentioned key.
+ 
+ * Example:
 {{{
   <mapping url="/ajax/*.html">
-    <default>
-      <response-headers>
-        <header key="Content-Type" value="text/xml"/>
-        <header key="Cache-Control" value="no-cache"/>
-      </response-headers>
-    </default>
-
     <conditional queryParamName="type" queryParamValue="(country|city)">
       <response-headers>
         <header key="Content-Type" value="text/xml"/>
@@ -119,3 +103,13 @@ Any {{{default}}} or {{{conditional}}} node is considered invalid without a list
     </conditional>
   </mapping>
 }}}
+ * NOTE: *Conditional rules are evaluated from bottom to top. _Last matching rule (in the config) wins_*.
+ 
+= response-headers =
+Any {{{default}}} or {{{conditional}}} node is considered invalid without a list response-headers that needs to be applied for a particular {{{mapping}}}. A response-headers node comprises of a list of {{{header}}} nodes.
+  == header == 
+  This the lowest unit in the configuration. Each header is a specific response header that needs to be applied to the {{{response}}}. A header comprises of
+   == key ==
+   To be specific, a response-header key.
+   == value ==
+   The value for the above mentioned key.
