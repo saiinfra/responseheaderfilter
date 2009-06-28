@@ -70,7 +70,17 @@ node. In case of multiple such nodes, <i>Last `<response-headers>` declaration w
 = default =
  * Description: One of the possible child nodes for a {{{mapping}}} node. Rules specified under default is the default fallback in case of absence of {{{conditional}}} nodes. Each mapping can have only one default. If you specify multiple such default's the last one is respected.
  * Required: No
-
+ * Example: 
+{{{
+  <mapping url="/ajax/*.html">
+    <default>
+      <response-headers>
+        <header key="Content-Type" value="text/xml"/>
+        <header key="Cache-Control" value="no-cache"/>
+      </response-headers>
+    </default>
+  </mapping>
+}}}
 = conditional =
  * Description: One of the possible child nodes for a {{{mapping}}} node. A {{{mapping}}} node may have many conditional nodes. The conditional nodes can be used to apply specific and different set of rules based on query parameters for the request.
  * Required: No
