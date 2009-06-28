@@ -1,6 +1,7 @@
 #summary A sample configuration file for the ResponseHeaderFilter
 = /WEB-INF/response-header-filter.xml =
 {{{
+<?xml version="1.0" encoding="UTF-8" ?>
 <!--
 Configuration file for the ResponseHeaderFilter. 
 Add a list of mappings that you want to introduce in your webapp for different url's.
@@ -8,7 +9,6 @@ Add a list of mappings that you want to introduce in your webapp for different u
 For details on the contents of this file, go here - http://code.google.com/p/responseheaderfilter/wiki/ConfigXml
 -->
 
-<?xml version="1.0" encoding="UTF-8" ?>
 <response-header-mapper>
   <!-- directives to set "no-cache" headers for all AJAX requests -->
   <mapping url="/ajax/*.html">
