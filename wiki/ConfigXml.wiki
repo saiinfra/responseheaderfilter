@@ -81,7 +81,7 @@ node. In case of multiple such nodes, <i>Last `<response-headers>` declaration w
   * Description: In the above example, the value has to be specified in the {{{queryParamValue}}} attribute. This also takes a {{{Pattern}}}.
   * Required: Yes
 
- * NOTE: *Conditional rules are evaluated from bottom to top. _Last matching rule (in the config) wins_.
+ * NOTE: *Conditional rules are evaluated from bottom to top. _Last matching rule (in the config) wins_*.
 
 = response-headers =
 Any {{{default}}} or {{{conditional}}} node is considered invalid without a list response-headers that needs to be applied for a particular {{{mapping}}}. A response-headers node comprises of a list of {{{header}}} nodes.
