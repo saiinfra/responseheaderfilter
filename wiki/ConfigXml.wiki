@@ -91,31 +91,20 @@ Any {{{default}}} or {{{conditional}}} node is considered invalid without a list
    To be specific, a response-header key
    == value ==
    The value for the above mentioned key.
+{{{
+  <mapping url="/ajax/*.html">
+    <default>
+      <response-headers>
+        <header key="Content-Type" value="text/xml"/>
+        <header key="Cache-Control" value="no-cache"/>
+      </response-headers>
+    </default>
 
-<table cellspacing="0" cellpadding="2" border="1" width="700">
- <thead>
-  <tr>
-   <td width="200">*Node name*</td>
-   <td width="200">*Attributes*</td>
-   <td width="300">*Description*</td>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td valign="top" width="200">response-header-mapper</td>
-   <td valign="top" width="500" colspan="2"><table cellspacing="0" cellpadding="0" border="1" width="500"><tr><td valign="top" width="200">processorClass</td><td valign="top" width="300">1. Description: Class to handle application of response headers.<br/>2. Required: No.<br/>3. Default: [http://code.google.com/p/responseheaderfilter/source/browse/trunk/src/java/com/avlesh/web/filter/responseheaderfilter/DefaultMappingProcessor.java DefaultMappingProcessor]</td>
-     </tr>
-    </table>
-   </td>
-  </tr>
-  <tr>
-   <td valign="top">mapping</td>
-   <td valign="top">url</td>
-   <td valign="top">  
-  # Description: Url pattern for which this mapping should be applied to.
-  # Required: Yes
-  # Remarks: Similar (read {{{equal}}}) url patterns in the mapping override the previous declaration.
-   </td>
-  </tr>
- </tbody>
-</table>
+    <conditional queryParamName="type" queryParamValue="(country|city)">
+      <response-headers>
+        <header key="Content-Type" value="text/xml"/>
+        <header key="Cache-Control" value="private, max-age=86400"/>
+      </response-headers>
+    </conditional>
+  </mapping>
+}}}
