@@ -66,8 +66,15 @@ node. In case of multiple such nodes, <i>Last `<response-headers>` declaration w
  * Required: No
 
 = conditional =
- * Description: One of the possible child nodes for a {{{mapping}}} node. A {{{mapping}}} node may have many conditional nodes.
+ * Description: One of the possible child nodes for a {{{mapping}}} node. A {{{mapping}}} node may have many conditional nodes. The conditional nodes can be used to apply specific and different set of rules based on query parameters for the request.
  * Required: No
+ * Attributes: 
+  == queryParamName == 
+  * Description: The query parameter based on which you want to have a {{{conditional}}} rule. e.g. you may want to apply different response headers to {{{/site/log-analyzer.html?type=xxxx}}} based on the {{{type}}} parameter. Your {{{queryParamName}}} in this case would be type.
+  * Required: Yes
+  == queryParamValue == 
+  * Description: In the above example, the value has to be specified in the {{{queryParamValue}}} attribute. This also takes a {{{Pattern}}}.
+  * Required: Yes
 
 <table cellspacing="0" cellpadding="2" border="1" width="700">
  <thead>
