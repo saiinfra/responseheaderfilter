@@ -1,4 +1,0 @@
-#summary Users of the ResoponseHeaderFilter
-
-= Show your love =
-If you happen to have used this filter, list yourself as one of the first to use it. Your comments and experiences will help others take a decision on whether to use it or not.
