@@ -10,9 +10,6 @@
   * [#queryParamName queryParamName]
   * [#queryParamValue queryParamValue]
  * [#response-headers response-headers]
-  * [#header header]
-   * [#key key]
-   * [#value value]
 
 = Introduction =
 <p>
@@ -109,7 +106,7 @@ node. In case of multiple such nodes, <i>Last `<response-headers>` declaration w
 Any {{{default}}} or {{{conditional}}} node is considered invalid without a list response-headers that needs to be applied for a particular {{{mapping}}}. A response-headers node comprises of a list of {{{header}}} nodes.
   == header == 
   This the lowest unit in the configuration. Each header is a specific response header that needs to be applied to the {{{response}}}. A header comprises of
-   == key ==
-   To be specific, a response-header key.
-   == value ==
-   The value for the above mentioned key.
+<br/>
+ <b>key<b>: To be specific, a response-header key.
+ <br/>
+ <b>value</b>: The value for the above mentioned key.
