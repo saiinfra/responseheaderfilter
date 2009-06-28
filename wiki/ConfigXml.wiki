@@ -62,7 +62,7 @@ node. In case of multiple such nodes, <i>Last `<response-headers>` declaration w
   * Default: {{{com.avlesh.web.filter.responseheaderfilter.DefaultMappingProcessor}}} 
 
 = default =
- * Description: This is a child node for the {{{mapping}}} node. If response headers are specified for this rule, 
+ * Description: One of the possible child nodes for a {{{mapping}}} node. Rules specified under default is the default fallback in case of absence of {{{conditional}}} nodes. 
  * Required: No
 
 <table cellspacing="0" cellpadding="2" border="1" width="700">
