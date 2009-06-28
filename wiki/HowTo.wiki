@@ -1,4 +1,4 @@
-#summary Contributing to the development of ResponseHeaderFilter
+#summary Contribute to the development of ResponseHeaderFilter
 
 = Introduction =
 Like most of the other open source frameworks, this originated from a very personal and specific requirement. ResponseHeaderFilter is much more extensive and extensible than what it originally was. This has happened only because of users like yourself, who have kept me enthusiastic about this filter by forwarding feature requests. 
