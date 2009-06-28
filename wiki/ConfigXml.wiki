@@ -1,4 +1,4 @@
-#summary Understand elements and attributes in the configuration
+#summary Understanding elements and attributes in the configuration
  * [#Introduction Introduction]
  * [#response-header-mapper response-header-mapper]
   * [#processorClass processorClass] 
