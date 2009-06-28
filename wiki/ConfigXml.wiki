@@ -106,7 +106,6 @@ node. In case of multiple such nodes, <i>Last `<response-headers>` declaration w
 Any {{{default}}} or {{{conditional}}} node is considered invalid without a list response-headers that needs to be applied for a particular {{{mapping}}}. A response-headers node comprises of a list of {{{header}}} nodes.
   == header == 
   This the lowest unit in the configuration. Each header is a specific response header that needs to be applied to the {{{response}}}. A header comprises of
-<br/>
- <b>key<b>: To be specific, a response-header key.
+ <b>key</b>: To be specific, a response-header key.
  <br/>
  <b>value</b>: The value for the above mentioned key.
