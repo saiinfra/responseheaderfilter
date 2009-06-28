@@ -62,7 +62,11 @@ node. In case of multiple such nodes, <i>Last `<response-headers>` declaration w
   * Default: {{{com.avlesh.web.filter.responseheaderfilter.DefaultMappingProcessor}}} 
 
 = default =
- * Description: One of the possible child nodes for a {{{mapping}}} node. Rules specified under default is the default fallback in case of absence of {{{conditional}}} nodes. 
+ * Description: One of the possible child nodes for a {{{mapping}}} node. Rules specified under default is the default fallback in case of absence of {{{conditional}}} nodes. Each mapping can have only one default. If you specify multiple such default's the last one is respected.
+ * Required: No
+
+= conditional =
+ * Description: One of the possible child nodes for a {{{mapping}}} node. A {{{mapping}}} node may have many conditional nodes.
  * Required: No
 
 <table cellspacing="0" cellpadding="2" border="1" width="700">
