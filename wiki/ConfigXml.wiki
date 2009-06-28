@@ -58,13 +58,14 @@ node. In case of multiple such nodes, <i>Last `<response-headers>` declaration w
  * Required: Yes
  * Attributes: 
   == url == 
-  * Description: The request {{{uri}}} for which this pattern is valid. Please not that this is *not* supposed to be a request url with complete {{{queryString}}}. All mappings should be done at the base uri level. Conditional mappings might be used to map using query string. Read about those, [#conditional here]
-  * Required: No
-  * Default: {{{com.avlesh.web.filter.responseheaderfilter.DefaultMappingProcessor}}} 
+  * Description: The *base url* to which the corresponding mapping should be applied to. This is only supposed to be the {{{uri}}}. To be able to use your request {{{queryString}}}, read the [#conditional conditional] node section.
+  * Required: Yes
+  * Example: {{{<mapping url="/ajax/*.html">}}} 
   == processorClass == 
-  * Description: A fully qualified class name for the processor class, if you want to process the response headers on your own. You would need a processor class when setting the headers needs to be done after some sort of evaluation over the request and/or response. <br/>Your class should implement the {{{com.avlesh.web.filter.responseheaderfilter.MappingProcessor}}} interface.
+  * Description: A fully qualified class name for the processor class for this particular mapping, if you want to process the response headers on your own or differently from other mappings. You would need a processor class when setting the headers needs to be done after some sort of evaluation over the request and/or response. <br/>Your class should implement the {{{com.avlesh.web.filter.responseheaderfilter.MappingProcessor}}} interface.
   * Required: No
   * Default: {{{com.avlesh.web.filter.responseheaderfilter.DefaultMappingProcessor}}} 
+  * Example: {{{<mapping url="/ajax/*.html" processorClass="com.foo.MyAjaxProcessor">}}}
 
 = default =
  * Description: One of the possible child nodes for a {{{mapping}}} node. Rules specified under default is the default fallback in case of absence of {{{conditional}}} nodes. Each mapping can have only one default. If you specify multiple such default's the last one is respected.
